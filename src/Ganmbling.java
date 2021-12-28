@@ -6,21 +6,34 @@ public class Ganmbling {
         int bet = 1;
         int count_win = 0;
         int count_lost = 0;
+        int count = 0;
         System.out.println("Gambling world,Everyday stake is:" + stake + "  Bet for every game is:" + bet);
-        for (int i = 1; i < 21; i++){
-          while (stake != 50 && stake != 150) {
-              double random = Math.random();
-              if (random < 0.5) {
-                  count_win =count_win + 1;
-                  stake = stake + bet;
-                  System.out.println("Lost amount is: " + bet + "  and stake amount is: " + stake);
-              } else {
-                  count_lost = 0;
-                  stake = stake - bet;
-                  System.out.println("Win amount is :" + bet + " And stake amount is: " + stake);
-              }
-          }
+        int[] days_of_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        for (int i = 1; i < days_of_month.length; i++) {
+            for (int j = 1; j < 30; j++) {
+
+                while (stake != 50 && stake != 150) {
+                    double random = Math.random();
+                    if (random < 0.5) {
+                        count_win = count_win + 1;
+                        stake = stake + bet;
+                        System.out.println("Lost amount is: " + bet + "  and stake amount is: " + stake);
+                    } else {
+                        count_lost = count_lost + 1;
+                        stake = stake - bet;
+                        System.out.println("Win amount is :" + bet + " And stake amount is: " + stake);
+                    }
+                }
+            }
+            if (count_win > count_lost) {
+                count = count_win - count_lost;
+                System.out.println("Total Amount win by : " + count_win);
+                System.out.println("how much win :" + count);
+            } else {
+                count = count_lost - count_win;
+                System.out.println("total Amount lost by : " + count_lost);
+                System.out.println("how much lost : " + count);
+            }
         }
-        System.out.println("total Amount Win : "+ count_win);
     }
 }
