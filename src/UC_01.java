@@ -1,4 +1,4 @@
-public class UC_01 {
+public class Gambling {
 
     public static void main(String[] args) {
 
@@ -8,10 +8,10 @@ public class UC_01 {
         double random = Math.random();
         if (random>0.5){
             stake = stake + bet;
-            System.out.println("Lost amount is:" + stake + "and stake amount is" + stake);
+            System.out.println("Wint amount is:" + stake + "and stake amount is" + stake);
         }else{
             stake = stake - bet;
-            System.out.println("Win amount is :" + bet + "And stake amount is" + stake);
+            System.out.println("Loss amount is :" + bet + "And stake amount is" + stake);
         }
 
     }
