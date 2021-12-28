@@ -10,7 +10,7 @@ public class UC_01 {
             int total = stake-bet;
             System.out.println("Lost amount is:" + stake + "and stake amount is" + total);
         }else{
-            int total = stake-bet;
+            int total = stake+bet;
             System.out.println("Win amount is :" + bet + "And stake amount is" + total);
         }
 
