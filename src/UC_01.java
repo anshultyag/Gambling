@@ -7,11 +7,11 @@ public class UC_01 {
         System.out.println("Gambling world,Everyday stake is:" + stake + "  Bet for every game is:" + bet);
         double random = Math.random();
         if (random>0.5){
-            int total = stake-bet;
-            System.out.println("Lost amount is:" + stake + "and stake amount is" + total);
+            stake = stake + bet;
+            System.out.println("Lost amount is:" + stake + "and stake amount is" + stake);
         }else{
-            int total = stake+bet;
-            System.out.println("Win amount is :" + bet + "And stake amount is" + total);
+            stake = stake - bet;
+            System.out.println("Win amount is :" + bet + "And stake amount is" +stake);
         }
 
     }
