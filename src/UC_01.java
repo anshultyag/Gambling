@@ -9,10 +9,10 @@ public class Gambling {
             double random = Math.random();
             if (random < 0.5) {
                 stake = stake + bet;
-                System.out.println("Lost amount is: " + bet + "  and stake amount is: " + stake);
+                System.out.println("Wint amount is: " + bet + "  and stake amount is: " + stake);
             } else {
                stake = stake - bet;
-                System.out.println("Win amount is :" + bet + " And stake amount is: " + stake);
+                System.out.println(Lost  amount is :" + bet + " And stake amount is: " + stake);
             }
 
         }
