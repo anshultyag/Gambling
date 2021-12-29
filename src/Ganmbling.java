@@ -22,5 +22,6 @@ public class Ganmbling {
           }
         }
         System.out.println("total Amount Win : "+ count_win);
+        System.out.println("total Amount lost : "+ count_lost);
     }
 }
