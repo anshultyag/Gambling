@@ -7,12 +7,8 @@ public class Ganmbling {
         int count_win = 0;
         int count_lost = 0;
         int count = 0;
-        System.out.println("Gambling world,Everyday stake is:" + stake + "  Bet for every game is:" + bet);
-        int[] days_of_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         for (int i = 1; i < days_of_month.length; i++) {
-            for (int j = 1; j < 30; j++) {
-
-                while (stake != 50 && stake != 150) {
+             while (stake != 50 && stake != 150) {
                     double random = Math.random();
                     if (random < 0.5) {
                         count_win = count_win + 1;
@@ -23,15 +19,14 @@ public class Ganmbling {
                         stake = stake - bet;
                         System.out.println("Win amount is :" + bet + " And stake amount is: " + stake);
                     }
-                }
-            }
+             }
             if (count_win > count_lost) {
                 count = count_win - count_lost;
-                System.out.println("Total Amount win by : " + count_win);
+                System.out.println(" Gambler is win day: " + i);
                 System.out.println("how much win :" + count);
             } else {
                 count = count_lost - count_win;
-                System.out.println("total Amount lost by : " + count_lost);
+                System.out.println(" Gambler is lost day: " + i);
                 System.out.println("how much lost : " + count);
             }
         }
